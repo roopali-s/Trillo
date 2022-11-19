@@ -52,47 +52,11 @@
     padding: 3rem;
 }
 
-.user-review{
+.user-reviews{    
     flex: 1;
-}
 
-
-
-///////////// REVIEWS
-.review{
-    font-size: inherit;
-    background-color: #fff;
-    box-shadow: var(--shadow-light);
-    padding: 3rem;
-    margin-bottom: 3.5rem;
-
-    &__text{
-
-    }
-
-    &__user{
-
-    }
-
-    &__photo{
-        width: 4.rem;
-        height: 4.5rem;
-        border-radius: 50%;
-    }
-
-    &__user-box{
-
-    }
-
-    &__user-name{
-
-    }
-
-    &__user-date{
-
-    }
-
-    &__rating{
-        
-    }
+    ///// to show all button in center without disturbing layout
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
 }
