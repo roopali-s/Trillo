@@ -137,6 +137,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -422,7 +425,8 @@ body {
   @media only screen and (max-width: 56.25em) {
     .review {
       padding: 2rem;
-      margin-bottom: 3rem; } }
+      margin-bottom: 3rem;
+      width: 100%; } }
   .review__text {
     z-index: 100;
     position: relative; }
