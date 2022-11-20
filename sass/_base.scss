@@ -36,6 +36,13 @@ Grey dark 3: #999
 
 }
 
+// media queries dont allows css custome properties(variables) thats why we are using scss variables
+
+$bp-largest : 75em; // 1200/16 = 75
+$bp-large : 68.75em; //1100/16 = 68.75
+$bp-medium : 56.25em; //900/16 = 56.25
+$bp-small : 37.5em; // 600/16 = 35.5
+
 *{
     margin:0;
     padding:0;
@@ -50,6 +57,10 @@ Grey dark 3: #999
 html{
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px;  10px / 16px = 62.5%
+    
+    @media only screen and (max-width: $bp-large){
+        font-size: 50%; // 1rem = 8px;  8/16 = 50%
+    }
 }
 body{
     font-family: 'Open Sans', sans-serif;

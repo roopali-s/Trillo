@@ -5,6 +5,13 @@
     box-shadow: var(--shadow-dark);
 
     min-height: 50rem;
+
+    @media only screen and(max-width:$bp-largest){
+        margin: 0;
+        // after adding breakpoint on 1100px to decrease font size container width become less than 1200px thats why added max-width / width to 100%
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header{
@@ -20,6 +27,10 @@
 
 .content{
     display: flex;
+
+    @media only screen and(max-width:$bp-medium){
+        flex-direction: column;
+    }
 }
 
 .sidebar{
@@ -41,6 +52,14 @@
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
+
+    @media only screen and (max-width:$bp-medium){
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width:$bp-small){
+        flex-direction: column;
+    }
 }
 
 .description{
@@ -50,6 +69,16 @@
     background-color: #fff;
     box-shadow: var(--shadow-light);
     padding: 3rem;
+
+    @media only screen and (max-width:$bp-medium){
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width:$bp-small){
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews{    
