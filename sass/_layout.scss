@@ -25,7 +25,9 @@
     align-items: center;
 
     @media only screen and (max-width:$bp-smallest){
-        
+        flex-wrap: wrap; // we added this to automatically move search box down when it not fits in header-width
+        align-content: space-around;
+        height: 11rem;
     }
 }
 

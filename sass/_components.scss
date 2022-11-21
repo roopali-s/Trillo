@@ -15,6 +15,8 @@
 
     @media only screen and (max-width:$bp-smallest){
         order: 1; // it means in flex container search box will be last item. default value for order is 0
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
     }
 
     &__input{
@@ -397,13 +399,19 @@
         //older browsers
         //background-image: url(../img/chevron-thin-right.svg); // we can not change color of icon here
 
+       
         //newer browser - masks
         //mask defines an area where we can look through the element and see whats behind that element
-        background-color: var(--color-primary);
-        -webkit-mask-image:url(../img/chevron-thin-right.svg);
-        -webkit-mask-size:cover;
-        mask-image:url(../img/chevron-thin-right.svg);
-        mask-size:cover;
+        @supports(-webkit-mask-image:url()) or (-webkit-mask-image:url()) {
+            background-color: var(--color-primary);
+            -webkit-mask-image:url(../img/chevron-thin-right.svg);
+            -webkit-mask-size:cover;
+            mask-image:url(../img/chevron-thin-right.svg);
+            mask-size:cover;
+            background-image: none;
+        }
+
+       
     }
 }
 
