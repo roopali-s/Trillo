@@ -1,2 +1,2 @@
 # trillo
-This is a study project.
+This is a demo project. Developed by Rupali Sharnangat.
